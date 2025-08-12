@@ -1,0 +1,63 @@
+const articlesEl = document.getElementById('articles');
+const fullArticleEl = document.getElementById('full-article');
+const articleView = document.getElementById('article-view');
+const backBtn = document.getElementById('back');
+const searchInput = document.getElementById('search');
+const tagFilter = document.getElementById('tagFilter');
+
+let articles = [];
+
+async function loadArticles(){
+  const res = await fetch('articles.json');
+  articles = await res.json();
+  populateTagFilter();
+  renderArticles(articles);
+}
+
+function populateTagFilter(){
+  const tags = new Set();
+  articles.forEach(a => a.tags.forEach(t => tags.add(t)));
+  tags.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t; opt.textContent = t;
+    tagFilter.appendChild(opt);
+  });
+}
+
+function renderArticles(list){
+  articlesEl.innerHTML = '';
+  if(list.length === 0){ articlesEl.innerHTML = '<p>Geen artikelen gevonden.</p>'; return; }
+  list.forEach(a => {
+    const card = document.createElement('div'); card.className='card';
+    const tags = a.tags.map(t=>`<span class="tag">${t}</span>`).join('');
+    card.innerHTML = `<h3>${a.title}</h3><div>${tags}</div><p>${a.summary}</p><button data-id="${a.id}">Lees meer</button>`;
+    articlesEl.appendChild(card);
+  });
+}
+
+articlesEl.addEventListener('click', e=>{
+  const id = e.target.getAttribute('data-id');
+  if(!id) return;
+  const a = articles.find(x => x.id === id);
+  fullArticleEl.innerHTML = `<h1>${a.title}</h1>${a.content}`;
+  articleView.hidden = false;
+  document.getElementById('onderwerpen').scrollIntoView({behavior:'smooth'});
+});
+
+backBtn.addEventListener('click', ()=>{ articleView.hidden = true; });
+
+searchInput.addEventListener('input', ()=> applyFilters());
+tagFilter.addEventListener('change', ()=> applyFilters());
+
+function applyFilters(){
+  const q = searchInput.value.toLowerCase().trim();
+  const tag = tagFilter.value;
+  const filtered = articles.filter(a=>{
+    const matchesQ = a.title.toLowerCase().includes(q) || a.summary.toLowerCase().includes(q) || a.content.toLowerCase().includes(q);
+    const matchesTag = tag ? a.tags.includes(tag) : true;
+    return matchesQ && matchesTag;
+  });
+  renderArticles(filtered);
+}
+
+loadArticles();

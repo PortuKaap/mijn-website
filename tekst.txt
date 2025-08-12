@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discussie & Analyse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Discussie & Analyse</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#onderwerpen">Onderwerpen</a>
+        <a href="#over">Over</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="intro">
+      <h2>Welkom</h2>
+      <p>Een verzameling logische, wetenschappelijke en religieuze analyses. Kies een onderwerp of zoek direct.</p>
+      <div class="search">
+        <input id="search" placeholder="Zoek op titel, tag of woord..." />
+        <select id="tagFilter">
+          <option value="">Alle onderwerpen</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="onderwerpen">
+      <h2>Artikelen</h2>
+      <div id="articles" class="articles-grid"></div>
+    </section>
+
+    <section id="article-view" class="article-view" hidden>
+      <button id="back">← Terug</button>
+      <article id="full-article"></article>
+    </section>
+
+    <section id="over">
+      <h2>Over</h2>
+      <p>Hier komen informatie over doel, bronnen en hoe artikelen ontstaan (onderzoek, logica, verwijzingen).</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Wil je dat ik artikelen toevoeg of content schrijf? Stuur een bericht (of vraag hier).</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Discussie & Analyse — Gemaakt voor jou</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "christendom-critiek",
+    "title": "Waarom sommige christelijke argumenten onlogisch zijn",
+    "tags": ["religie","christendom","logica"],
+    "summary": "Analyse van veelgebruikte argumenten binnen het christendom, met logische tegenargumenten en bronnen.",
+    "content": "<h2>Inleiding</h2><p>Hier leg ik in simpele taal uit waarom bepaalde redeneringen niet kloppen...</p><h3>1) Interne inconsistenties</h3><p>Voorbeeld: ...</p><h3>Bronnen</h3><p>Bijbelverwijzingen en citaten van geleerden kunnen hier.</p>"
+  },
+  {
+    "id": "ik-voel-het-niet-meer",
+    "title": "Waarom 'ik voel het niet meer' geen goede reden is om alles te beëindigen",
+    "tags": ["liefde","relaties"],
+    "summary": "Uitleg waarom gevoelens veranderen, en hoe communicatie en actie belangrijker zijn dan alleen 'gevoel'.",
+    "content": "<p>Gevoelens veranderen vaker dan mensen denken. Voorbeeldstappen: praten, kleine veranderingen, therapie of begeleiding, nadenken over patronen, etc.</p>"
+  },
+  {
+    "id": "politieke-macht-analyse",
+    "title": "Waarom bepaalde landen een grote invloed hebben op internationaal lijden",
+    "tags": ["politiek","wereld"],
+    "summary": "Een overzicht van factoren waardoor landen zoals grote mogendheden invloed hebben op conflicten en economisch lijden wereldwijd.",
+    "content": "<p>Analyse: militaire macht, economische sancties, geopolitieke allianties. Bespreking van oorzaken en gevolgen.</p>"
+  },
+  {
+    "id": "opvoeding-en-ouders",
+    "title": "Opvoeding: wat werkt in de praktijk?",
+    "tags": ["opvoeding","ouders","psychologie"],
+    "summary": "Praktische tips voor opvoeding en gedrag van ouders, met aandacht voor communicatie en grenzen.",
+    "content": "<p>Concrete tips: routine, consequent handelen, luisteren, modelgedrag en grenzen stellen.</p>"
+  }
+]
